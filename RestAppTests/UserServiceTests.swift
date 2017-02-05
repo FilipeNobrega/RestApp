@@ -30,7 +30,7 @@ class UserServiceTests: XCTestCase {
     self.waitForExpectations(timeout: self.timeOut, handler: nil)
   }
 
-  func testThatWhenResponseIsAnNormalJsonItShouldReturnAnArray() {
+  func testThatWhenResponseIsValidJsonItShouldReturnAnArray() {
     TestHelper().prepareStub(with: "jsonplaceholder.typicode.com", file: "UsersRequest")
     
     let expectation = self.expectation(description: "Waiting for web response")
@@ -40,6 +40,36 @@ class UserServiceTests: XCTestCase {
       XCTAssertNotNil(models)
       if let models = models {
         XCTAssertTrue(models.count == 10)
+      }
+      expectation.fulfill()
+    }
+    self.waitForExpectations(timeout: self.timeOut, handler: nil)
+  }
+
+  func testThatWhenResponseIsValidJsonItShouldCorrectlyParseUserObject() {
+    TestHelper().prepareStub(with: "jsonplaceholder.typicode.com", file: "UsersRequest")
+
+    let expectation = self.expectation(description: "Waiting for web response")
+
+    UserService.requestUsers(with: 0) { (models: [UserModel]?, statusCode: Int?, error: Error?) in
+      XCTAssertTrue(statusCode == 200)
+
+      if let userModel = models?[0] {
+        XCTAssertEqual(userModel.id, 1)
+        XCTAssertEqual(userModel.name, "Leanne Graham")
+        XCTAssertEqual(userModel.username, "Bret")
+        XCTAssertEqual(userModel.email, "Sincere@april.biz")
+        XCTAssertEqual(userModel.phone, "1-770-736-8031 x56442")
+        XCTAssertEqual(userModel.website, "hildegard.org")
+        XCTAssertEqual(userModel.company.name, "Romaguera-Crona")
+        XCTAssertEqual(userModel.company.catchPhrase, "Multi-layered client-server neural-net")
+        XCTAssertEqual(userModel.company.bs, "harness real-time e-markets")
+        XCTAssertEqual(userModel.address.street, "Kulas Light")
+        XCTAssertEqual(userModel.address.suite, "Apt. 556")
+        XCTAssertEqual(userModel.address.city, "Gwenborough")
+        XCTAssertEqual(userModel.address.zipcode, "92998-3874")
+        XCTAssertEqual(userModel.address.geo.latitude, -37.3159)
+        XCTAssertEqual(userModel.address.geo.longitude, 81.1496)
       }
       expectation.fulfill()
     }
