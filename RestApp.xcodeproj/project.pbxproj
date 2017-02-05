@@ -38,6 +38,9 @@
 		D73767D91E4686DE00EB5CC6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73767D81E4686DE00EB5CC6 /* UserService.swift */; };
 		D73767DA1E4688F900EB5CC6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73767D81E4686DE00EB5CC6 /* UserService.swift */; };
 		D73767DC1E468AA100EB5CC6 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73767DB1E468AA100EB5CC6 /* UserServiceTests.swift */; };
+		D73767DE1E46A77600EB5CC6 /* UsersRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = D73767DD1E46A77600EB5CC6 /* UsersRequest.json */; };
+		D73767E01E46A84B00EB5CC6 /* empty.html in Resources */ = {isa = PBXBuildFile; fileRef = D73767DF1E46A84B00EB5CC6 /* empty.html */; };
+		D73767E21E46AB2F00EB5CC6 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = D73767E11E46AB2F00EB5CC6 /* empty.json */; };
 		E6CA46F6C293A7B1811063C1 /* Pods_RestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA8191F4292FD19DF144210 /* Pods_RestAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		D73767D51E4678E200EB5CC6 /* RestServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestServiceTests.swift; sourceTree = "<group>"; };
 		D73767D81E4686DE00EB5CC6 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D73767DB1E468AA100EB5CC6 /* UserServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
+		D73767DD1E46A77600EB5CC6 /* UsersRequest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersRequest.json; sourceTree = "<group>"; };
+		D73767DF1E46A84B00EB5CC6 /* empty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = empty.html; sourceTree = "<group>"; };
+		D73767E11E46AB2F00EB5CC6 /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
 		D78854783A2B53E42A154FC0 /* Pods-RestAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestAppUITests/Pods-RestAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFC01ADD95FD5C5DCAD8FAF3 /* Pods-RestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestAppUITests/Pods-RestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				D73767B81E46475A00EB5CC6 /* UserModelDataTest.json */,
+				D73767DD1E46A77600EB5CC6 /* UsersRequest.json */,
+				D73767DF1E46A84B00EB5CC6 /* empty.html */,
+				D73767E11E46AB2F00EB5CC6 /* empty.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -408,6 +417,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73767B91E46475A00EB5CC6 /* UserModelDataTest.json in Resources */,
+				D73767E21E46AB2F00EB5CC6 /* empty.json in Resources */,
+				D73767E01E46A84B00EB5CC6 /* empty.html in Resources */,
+				D73767DE1E46A77600EB5CC6 /* UsersRequest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

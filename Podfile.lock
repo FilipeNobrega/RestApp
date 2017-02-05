@@ -1,6 +1,21 @@
 PODS:
   - Alamofire (4.3.0)
   - Cuckoo (0.8.3)
+  - OHHTTPStubs (5.2.3):
+    - OHHTTPStubs/Default (= 5.2.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/Default (5.2.3):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.3)
+  - OHHTTPStubs/Swift (5.2.3):
+    - OHHTTPStubs/Core
   - PhoneNumberKit (1.2.2):
     - PhoneNumberKit/PhoneNumberKitCore (= 1.2.2)
     - PhoneNumberKit/UIKit (= 1.2.2)
@@ -13,6 +28,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Cuckoo
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
   - PhoneNumberKit (~> 1.2)
   - SnapKit
   - SwiftyJSON
@@ -20,10 +37,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Cuckoo: 2daf5d23383c0a24cd60b73287a5813af4793add
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   PhoneNumberKit: ffae8f18fb78c1425c7af973711b0b0fd4f4104f
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: b3263f701e57e623c67536b2efe329f3dfaf9edc
+PODFILE CHECKSUM: 3c5eb635d2ac9ae83c45c046205a7f3ab90d362d
 
 COCOAPODS: 1.2.0

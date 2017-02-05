@@ -26,12 +26,13 @@ class UserService {
         return
       }
       
+      var userModels = [UserModel]()
+
       guard let jsonObjects = response.array else {
-        callback(nil, statusCode, error)
+        callback(userModels, statusCode, error)
         return
       }
 
-      var userModels = [UserModel]()
       for json: JSON in jsonObjects {
         if let userModel = UserModel(json: json) {
           userModels.append(userModel)

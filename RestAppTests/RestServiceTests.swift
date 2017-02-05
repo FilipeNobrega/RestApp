@@ -13,6 +13,7 @@ class RestServiceTests: XCTestCase {
   fileprivate let timeOut : TimeInterval = 10.0
 
   func testThatWhenResponseIsNotAValidJSONItShouldReturnError() {
+    TestHelper().prepareStub(with: "google.com", file: "empty", type: "html")
     let expectation = self.expectation(description: "Waiting for web response")
 
     RestService.request(with: "https://google.com/") { (response: Any?, statusCode: Int?, error: Error?) in
@@ -26,6 +27,7 @@ class RestServiceTests: XCTestCase {
   }
 
   func testThatWhenResponseIsAValidJSONItShouldReturnSuccess() {
+    TestHelper().prepareStub(with: "jsonplaceholder.typicode.com", file: "UsersRequest")
     let expectation = self.expectation(description: "Waiting for web response")
 
     RestService.request(with: "https://jsonplaceholder.typicode.com/users/1/") { (response: Any?, statusCode: Int?, error: Error?) in

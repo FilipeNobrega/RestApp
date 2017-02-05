@@ -8,6 +8,9 @@ target 'RestApp' do
   pod 'PhoneNumberKit', '~> 1.2'
   pod 'SnapKit'
   pod 'Cuckoo'
+  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs/Swift'
+
   target 'RestAppTests' do
     inherit! :search_paths
   end
