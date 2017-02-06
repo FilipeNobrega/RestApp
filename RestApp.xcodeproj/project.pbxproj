@@ -11,7 +11,7 @@
 		78B3939DA358386E276A2046 /* Pods_RestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9600F5B3BAEAA054C5481733 /* Pods_RestApp.framework */; };
 		D703FC931E47A8550004AD72 /* UILabel+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703FC921E47A8550004AD72 /* UILabel+Initializers.swift */; };
 		D70EA71F1E46387E0015B25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70EA71E1E46387E0015B25F /* AppDelegate.swift */; };
-		D70EA7211E46387E0015B25F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70EA7201E46387E0015B25F /* MainViewController.swift */; };
+		D70EA7211E46387E0015B25F /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70EA7201E46387E0015B25F /* UserListViewController.swift */; };
 		D70EA7241E46387E0015B25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70EA7221E46387E0015B25F /* Main.storyboard */; };
 		D70EA7261E46387E0015B25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70EA7251E46387E0015B25F /* Assets.xcassets */; };
 		D70EA7291E46387E0015B25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70EA7271E46387E0015B25F /* LaunchScreen.storyboard */; };
@@ -73,7 +73,7 @@
 		D703FC921E47A8550004AD72 /* UILabel+Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Initializers.swift"; sourceTree = "<group>"; };
 		D70EA71B1E46387E0015B25F /* RestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70EA71E1E46387E0015B25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D70EA7201E46387E0015B25F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D70EA7201E46387E0015B25F /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		D70EA7231E46387E0015B25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D70EA7251E46387E0015B25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D70EA7281E46387E0015B25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		D703FC901E47A7B30004AD72 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D70EA7201E46387E0015B25F /* MainViewController.swift */,
+				D70EA7201E46387E0015B25F /* UserListViewController.swift */,
 				D73767E71E4783D900EB5CC6 /* UserDetailViewController.swift */,
 			);
 			name = Controllers;
@@ -615,7 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73767A91E463CC600EB5CC6 /* UserModel.swift in Sources */,
-				D70EA7211E46387E0015B25F /* MainViewController.swift in Sources */,
+				D70EA7211E46387E0015B25F /* UserListViewController.swift in Sources */,
 				D73767E61E47739A00EB5CC6 /* UserTableViewCell.swift in Sources */,
 				D73767D91E4686DE00EB5CC6 /* UserService.swift in Sources */,
 				D7F1F0F21E47EAAE0098C064 /* LocalizedStrings.swift in Sources */,

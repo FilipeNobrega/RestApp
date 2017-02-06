@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--User List View Controller-->
         <scene sceneID="Hg7-D6-EHy">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ESi-Xu-ckW" customClass="MainViewController" customModule="RestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ESi-Xu-ckW" customClass="UserListViewController" customModule="RestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sqa-5A-hzb"/>
                         <viewControllerLayoutGuide type="bottom" id="sc0-CW-pPB"/>
@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="awB-0L-pBM" id="xsy-vN-jAE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -50,7 +50,7 @@
                             <constraint firstAttribute="trailing" secondItem="AOp-ga-lg4" secondAttribute="trailing" id="hHJ-s5-o5t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Qnh-AU-M91" customClass="Ma"/>
+                    <navigationItem key="navigationItem" id="Qnh-AU-M91"/>
                     <connections>
                         <outlet property="tableIndicatorView" destination="zoa-gV-7Rf" id="xu4-vQ-Cvc"/>
                         <outlet property="tableView" destination="AOp-ga-lg4" id="stv-mB-lU7"/>

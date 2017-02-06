@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  UserListViewController.swift
 //  RestApp
 //
 //  Created by Filipe Nobrega on 2/4/17.
@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class MainViewController: UIViewController {
+class UserListViewController: UIViewController {
 
   @IBOutlet weak var tableIndicatorView: TableLoadingIndicatorView!
   @IBOutlet weak var tableView: UITableView!
@@ -112,7 +112,7 @@ class MainViewController: UIViewController {
 }
 
 // MARK: - UITableViewDelegate extension
-extension MainViewController: UITableViewDelegate {
+extension UserListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     cell.selectionStyle = .none
   }
