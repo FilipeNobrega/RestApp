@@ -10,18 +10,18 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-typealias restResponse = ((_ response: JSON?,_ responseCode: Int?, _ error: Error?) -> ())
+typealias RestResponse = ((_ response: JSON?, _ error: Error?) -> ())
 
 class RestService {
-  class func request(with endPoint: String, callback: @escaping restResponse) {
+  class func request(withEndPoint endPoint: String, callback: @escaping RestResponse) {
     Alamofire.request(endPoint).responseJSON { (response: DataResponse<Any>) in
       guard let resultValue = response.value else {
-        callback(nil, response.response?.statusCode, response.error)
+        callback(nil, response.error)
         return
       }
       let json = JSON(resultValue)
 
-      callback(json, response.response?.statusCode, response.error)
+      callback(json, response.error)
     }
   }
 }

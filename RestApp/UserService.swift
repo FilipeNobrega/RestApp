@@ -10,26 +10,26 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-typealias userResponse = ((_ response: [UserModel]? ,_ responseCode: Int?, _ error: Error?) -> ())
+typealias UserResponse = ((_ response: [UserModel]?, _ error: Error?) -> ())
 
 class UserService {
-  class func requestUsers(with pageIndex: Int, callback: @escaping userResponse) {
+  class func requestUsers(forPageIndex pageIndex: Int = 1, callback: @escaping UserResponse) {
     guard pageIndex >= 0 else {
-      callback(nil, nil, nil)
+      callback(nil, nil)
       return
     }
 
-    RestService.request(with: "http://jsonplaceholder.typicode.com/users?_page\(pageIndex)") {
-      (response: JSON?, statusCode: Int?, error: Error?) in
+    RestService.request(withEndPoint: "\(Bundle.main.apiEntrypoint)?_page=\(pageIndex)&_sort=name") {
+      (response: JSON?, error: Error?) in
       guard let response = response else {
-        callback(nil, statusCode, error)
+        callback(nil, error)
         return
       }
       
       var userModels = [UserModel]()
 
       guard let jsonObjects = response.array else {
-        callback(userModels, statusCode, error)
+        callback(userModels, error)
         return
       }
 
@@ -39,7 +39,7 @@ class UserService {
         }
       }
 
-      callback(userModels, statusCode, nil)
+      callback(userModels, nil)
     }
   }
 }

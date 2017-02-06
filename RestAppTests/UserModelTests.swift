@@ -10,6 +10,8 @@ import Foundation
 import SwiftyJSON
 import XCTest
 
+@testable import RestApp
+
 class UserModelTests: XCTestCase {
 
   override func setUp() {

@@ -3,13 +3,13 @@
 
 target 'RestApp' do
   use_frameworks!
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
-  pod 'PhoneNumberKit', '~> 1.2'
-  pod 'SnapKit'
-  pod 'Cuckoo'
-  pod 'OHHTTPStubs'
-  pod 'OHHTTPStubs/Swift'
+  pod 'Alamofire', '4.3.0'
+  pod 'SwiftyJSON', '3.1.4'
+  pod 'SnapKit', '3.1.2'
+  pod 'OHHTTPStubs', '5.2.3'
+  pod 'OHHTTPStubs/Swift', '5.2.3'
+  pod 'RxSwift', '3.2.0'
+  pod 'RxCocoa', '3.2.0'
 
   target 'RestAppTests' do
     inherit! :search_paths

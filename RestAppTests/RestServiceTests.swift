@@ -9,6 +9,8 @@
 import Foundation
 import XCTest
 
+@testable import RestApp
+
 class RestServiceTests: XCTestCase {
   fileprivate let timeOut : TimeInterval = 10.0
 
@@ -16,39 +18,32 @@ class RestServiceTests: XCTestCase {
     TestHelper().prepareStub(with: "google.com", file: "empty", type: "html")
     let expectation = self.expectation(description: "Waiting for web response")
 
-    RestService.request(with: "https://google.com/") { (response: Any?, statusCode: Int?, error: Error?) in
-
-      XCTAssertTrue(statusCode == 200)
+    RestService.request(withEndPoint: "https://google.com/") { (response: Any?, error: Error?) in
       XCTAssertNotNil(error)
-
       expectation.fulfill()
     }
-    self.waitForExpectations(timeout: self.timeOut, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testThatWhenResponseIsAValidJSONItShouldReturnSuccess() {
     TestHelper().prepareStub(with: "jsonplaceholder.typicode.com", file: "UsersRequest")
     let expectation = self.expectation(description: "Waiting for web response")
 
-    RestService.request(with: "https://jsonplaceholder.typicode.com/users/1/") { (response: Any?, statusCode: Int?, error: Error?) in
-
-      XCTAssertTrue(statusCode == 200)
+    RestService.request(withEndPoint: "https://jsonplaceholder.typicode.com/users") { (response: Any?, error: Error?) in
       XCTAssertNotNil(response)
-
       expectation.fulfill()
     }
-    self.waitForExpectations(timeout: self.timeOut, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 
   func testThatATSWillAllowUnsecureAccessFromTypicode() {
     let expectation = self.expectation(description: "Waiting for web response")
 
-    RestService.request(with: "http://jsonplaceholder.typicode.com/users/1/") { (response: Any?, statusCode: Int?, error: Error?) in
-
-      XCTAssertTrue(statusCode == 200)
+    RestService.request(withEndPoint: "http://jsonplaceholder.typicode.com/users") { (response: Any?, error: Error?) in
+      XCTAssertNotNil(response)
       expectation.fulfill()
     }
 
-    self.waitForExpectations(timeout: self.timeOut, handler: nil)
+    waitForExpectations(timeout: timeOut, handler: nil)
   }
 }
